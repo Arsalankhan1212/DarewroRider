@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:height="20dp"
+        android:width="5dp"
+        android:drawable="@drawable/red_drawable_curve"
+        android:left="12.5dp"
+        android:top="20dp" />
+    <item
+        android:width="30dp"
+        android:height="30dp"
+        android:drawable="@drawable/thumb_red" />
+</layer-list>

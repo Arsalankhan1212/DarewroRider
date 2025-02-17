@@ -1,0 +1,177 @@
+{
+  "project_info": {
+    "project_number": "1092116105466",
+    "project_id": "darewro-12c0a",
+    "storage_bucket": "darewro-12c0a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092116105466:android:0fa50bb9c1adf9df492143",
+        "android_client_info": {
+          "package_name": "com.darewro.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092116105466-0mmqsajhfcvr8m31duegrcesjd9leggr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.customer",
+            "certificate_hash": "a4b00d75dbaf504f4055c6c491636c34ee7d4051"
+          }
+        },
+        {
+          "client_id": "1092116105466-197qadvqnk5kl4eoih9f9j8fduhgbegi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.customer",
+            "certificate_hash": "746df0360b625ff8b1835ac3af5010de72f8a532"
+          }
+        },
+        {
+          "client_id": "1092116105466-iha6skrenn5b7easpmc2sk38lvmus0ei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.customer",
+            "certificate_hash": "7d28f700cea23e4c19e47d2c6b7f0c18e88fa292"
+          }
+        },
+        {
+          "client_id": "1092116105466-lsmt34d3llntgl05p39j8r3ntjualp92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.customer",
+            "certificate_hash": "5fff08a9f5ee327d6b6e6711add6fe6293b78db1"
+          }
+        },
+        {
+          "client_id": "1092116105466-vdu3v3oq7b5jbeaq8qjsu02l3is3nul7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.customer",
+            "certificate_hash": "1f4b970b6e824bd2a7ae3ba7b08615e3c239f7b3"
+          }
+        },
+        {
+          "client_id": "1092116105466-l5g37j89hcfamv3ne0r34q28836nlek6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg7d4PTYCVRLWcYHuItD-VeKvZYeYX_dU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092116105466-l5g37j89hcfamv3ne0r34q28836nlek6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092116105466:android:4d2281c4c80744c6492143",
+        "android_client_info": {
+          "package_name": "com.darewro.partner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092116105466-3ilcjtvgbu3vni5l0jmksitf67pkm44l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.partner",
+            "certificate_hash": "1f4b970b6e824bd2a7ae3ba7b08615e3c239f7b3"
+          }
+        },
+        {
+          "client_id": "1092116105466-ngunjb3kf580teeb5hqtacsq6pff8goo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.partner",
+            "certificate_hash": "a4b00d75dbaf504f4055c6c491636c34ee7d4051"
+          }
+        },
+        {
+          "client_id": "1092116105466-l5g37j89hcfamv3ne0r34q28836nlek6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg7d4PTYCVRLWcYHuItD-VeKvZYeYX_dU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092116105466-l5g37j89hcfamv3ne0r34q28836nlek6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092116105466:android:0bcb6733cdf5dd58492143",
+        "android_client_info": {
+          "package_name": "com.darewro.riderApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092116105466-09iokjmaf261algl52dhej5k7mrnqi5g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.riderApp",
+            "certificate_hash": "a0a32efc11016fe75429220695291e09c1fbf45f"
+          }
+        },
+        {
+          "client_id": "1092116105466-467a8effj51s4hkdps2cdhe34cculjht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.riderApp",
+            "certificate_hash": "1f4b970b6e824bd2a7ae3ba7b08615e3c239f7b3"
+          }
+        },
+        {
+          "client_id": "1092116105466-486fjnrku1e19riti3bsfue9p2aed8pm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.darewro.riderApp",
+            "certificate_hash": "9b6bd07a9134d6360661fda0ae2591017d454c01"
+          }
+        },
+        {
+          "client_id": "1092116105466-l5g37j89hcfamv3ne0r34q28836nlek6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg7d4PTYCVRLWcYHuItD-VeKvZYeYX_dU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092116105466-l5g37j89hcfamv3ne0r34q28836nlek6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

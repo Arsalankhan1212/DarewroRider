@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".view.activities.ChatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_drawable"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetEnd="0dp"
+                android:contentInsetRight="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_action_arrow_back" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/composing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/recording_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:background="@drawable/mic_background_pressed"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="5dp"
+>
+
+        <ImageButton
+            android:id="@+id/recording"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/mic_selector_background"
+            android:src="@drawable/mic_selector"/>
+
+        <com.stfalcon.chatkit.messages.MessageInput
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            app:attachmentButtonDefaultBgColor="@color/grey"
+            app:attachmentButtonDefaultBgPressedColor="@color/cornflower_blue_two_dark"
+            app:attachmentButtonDefaultIconColor="@color/warm_grey"
+            app:attachmentButtonDefaultIconPressedColor="@color/white"
+            app:attachmentButtonIcon="@drawable/ic_camera"
+            app:inputHint="@string/hint_enter_a_message"
+            app:showAttachmentButton="true" />
+
+    </LinearLayout>
+    </LinearLayout>
+    <com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/messagesList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:incomingBubblePaddingBottom="0dp"
+        app:incomingBubblePaddingTop="0dp"
+        app:incomingBubblePaddingLeft="0dp"
+        app:incomingBubblePaddingRight="0dp"
+        app:outcomingBubblePaddingBottom="0dp"
+        app:outcomingBubblePaddingTop="0dp"
+        app:outcomingBubblePaddingLeft="0dp"
+        app:outcomingBubblePaddingRight="0dp"
+        app:incomingDefaultBubbleColor="@color/incoming_bubble_default"
+        app:incomingDefaultBubblePressedColor="@color/incoming_bubble_pressed"
+        app:incomingDefaultBubbleSelectedColor="@color/gray"
+        app:incomingDefaultImageOverlayPressedColor="@color/incoming_bubble_pressed"
+        app:incomingDefaultImageOverlaySelectedColor="@color/gray"
+        app:incomingTextColor="@color/white"
+        app:incomingTextLinkColor="@color/white"
+        app:incomingTextSize="14sp"
+        app:incomingTimeTextColor="@color/gray"
+        app:incomingTimeTextSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_input"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:outcomingDefaultBubbleColor="@color/outcoming_bubble_default"
+        app:outcomingDefaultBubblePressedColor="@color/outcoming_bubble_pressed"
+        app:outcomingDefaultBubbleSelectedColor="@color/gray"
+        app:outcomingDefaultImageOverlayPressedColor="@color/outcoming_bubble_pressed"
+        app:outcomingDefaultImageOverlaySelectedColor="@color/gray"
+        app:outcomingTextColor="@color/white"
+        app:outcomingTextLinkColor="@color/white"
+        app:outcomingTextSize="14sp"
+        app:outcomingTimeTextColor="@color/gray"
+        app:outcomingTimeTextSize="10sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

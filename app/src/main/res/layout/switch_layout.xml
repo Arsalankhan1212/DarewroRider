@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:orientation="horizontal">
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.07"
+        android:showText="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textOff="Unavailable"
+        android:textOn="Available"
+        android:textSize="14dp"
+        android:theme="@style/SCBSwitch" />
+
+    <TextView
+        android:id="@+id/toolbarTextId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.07"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

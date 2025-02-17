@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/app_default_color</color>
+    <color name="colorPrimaryDark">@color/app_default_color</color>
+    <color name="colorAccent">@color/app_default_color</color>
+    <color name="grey_semitransparent">#BF262626</color>
+    <color name="grey_semitransparent2">#e2262626</color>
+    <color name="gray">#262626</color>
+    <color name="white_semitransparent">#bfc4c4c4</color>
+    <color name="bg">#eeeeee</color>
+    <color name="app_default_text_color">@color/app_yellow_text</color>
+    <color name="app_yellow_text">#E5B000</color>
+    <color name="gradient_yellow_dark">#E88E03</color>
+    <color name="gradient_yellow_light">#F5BC00</color>
+    <color name="app_yellow">#E5B000</color>
+    <color name="app_yellow_light">#C9D8B52B</color>
+    <color name="app_yellow_with_transparency">#5ed8b52b</color>
+    <color name="app_yellow_dark">#b99400</color>
+    <color name="app_dark_green">#00574B</color>
+    <color name="app_light_green">#008577</color>
+    <!--<color name="title_red">#F00</color>-->
+    <color name="title_red">#FB3544</color>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+    <!--<color name="app_red">#F00</color>-->
+    <color name="app_red">#FFFB3544</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey_transparent">#EBEAEA</color>
+    <color name="grey">#d1d1d1</color>
+    <color name="grey2">#9e9d9d</color>
+    <color name="facebook">#3B5998</color>
+    <color name="white_alpha">#80FFFFFF</color>
+    <color name="white_alpha2">#A6FFFFFF</color>
+    <color name="white_alpha3">#E6FFFFFF</color>
+    <color name="light_grey">#E8E8E8</color>
+    <color name="darker_grey">#434343</color>
+    <color name="dark_grey">#515151</color>
+    <color name="lighter_grey">#8A8A8A</color>
+    <color name="app_orange">#FFA726</color>
+    <color name="green">#1BCC7F</color>
+    <color name="light_green">#D0F0C0</color>
+    <color name="green_light">#56C998</color>
+    <color name="app_default_color">@color/app_yellow</color>
+    <color name="normal_grey">#565656</color>
+
+
+
+    <color name="blue_">#42A5F5</color>
+    <color name="red_">#EF5350</color>
+    <color name="yellow_">#FFCA28</color>
+    <color name="purple_">#7E57C2</color>
+    <color name="dark_green">#3b9a1a</color>
+
+
+    <color name="incoming_bubble_default">#1565c0</color>
+    <color name="incoming_bubble_pressed">#003c8f</color>
+    <color name="incoming_bubble_light">#5e92f3</color>
+
+    <color name="outcoming_bubble_default">#6d6d6d</color>
+    <color name="outcoming_bubble_pressed">#424242</color>
+    <color name="outcoming_bubble_light">#8e8e8e</color>
+
+
+    <color name="grey_semitransparent3">#6A262626</color>
+
+</resources>

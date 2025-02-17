@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:foreground="@drawable/selectable_drawable_ripple"
+        android:stateListAnimator="@animator/lift_on_touch"
+        app:cardCornerRadius="0dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@color/transparent"
+                    android:minHeight="200dp"
+                    android:scaleType="centerCrop"
+                    android:tintMode="src_atop" />
+
+                <!--android:foreground="@color/grey_overlay"-->
+                <com.darewro.riderApp.view.customViews.ProgressBarDotted
+                    android:id="@+id/progress"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="50dp"
+                    app:activeDot="@color/white_alpha"
+                    app:activeDotColor="@color/white_alpha"
+                    app:dotSize="5dp"
+                    app:emptyDotsColor="@color/app_yellow"
+                    app:inactiveDot="@color/app_yellow"
+                    app:jumpingSpeed="670"
+                    app:spacing="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:background="@color/app_red"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:text="20% off"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="105dp"
+                            android:background="@color/grey_semitransparent2"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/partner_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left"
+                                    android:includeFontPadding="false"
+                                    android:text="Outlet Name"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/tags"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:marqueeRepeatLimit="3"
+                                    android:singleLine="true"
+                                    android:text="Pan cakes, Desserts, Fruits,Chocolate, Lava Cake"
+                                    android:textColor="@color/white"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="105dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/minimum_ammount"
+                                    android:textColor="@color/grey2"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="Rs. "
+                                    android:textColor="@color/grey_semitransparent"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/minimum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="450"
+                                    android:textColor="@color/grey_semitransparent"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/delivery_fee"
+                                    android:textColor="@color/grey2"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="Rs. "
+                                    android:textColor="@color/grey_semitransparent"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/delivery"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="50"
+                                    android:textColor="@color/grey_semitransparent"
+                                    android:textSize="12dp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/rating"
+                                    android:textColor="@color/grey2"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="1" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@android:drawable/btn_star_big_on"
+                                    android:tint="@color/app_red" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="3.5 (92 reviews)"
+                                    android:textColor="@color/grey_semitransparent"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/black"
+                    android:src="@drawable/no_image" />
+
+            </FrameLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

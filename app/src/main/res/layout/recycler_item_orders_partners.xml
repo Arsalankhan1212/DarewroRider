@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:elevation="0dp"
+    app:cardCornerRadius="0dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/partner_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.07"
+                android:text="@string/recipient_contact"
+                android:textColor="@color/app_default_text_color"
+                android:gravity="center_vertical"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/sub_total_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.07"
+                        android:text="@string/sub_total"
+                        android:textColor="@color/dark_grey"
+                        android:layout_marginRight="10dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/sub_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.07"
+                        android:text="@string/sub_total"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/discount_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.07"
+                        android:text="@string/discount"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.07"
+                        android:text="@string/discount"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/total_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.07"
+                        android:text="@string/total"
+                        android:textColor="@color/dark_grey"
+                        android:layout_marginRight="10dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="-0.07"
+                        android:text="@string/total"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/price"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--            android:includeFontPadding="false"-->
+<!--            android:letterSpacing="-0.07"-->
+<!--                android:gravity="center_vertical|right"-->
+<!--                android:text="@string/recipient_name"-->
+<!--                android:textColor="@color/dark_grey"-->
+<!--                android:textSize="16dp"-->
+<!--                android:textStyle="bold"/>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.07"
+                android:drawableLeft="@drawable/drop_off_pin"
+                android:text="@string/recipient_contact"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/darker_grey"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/layout"
+    android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvtab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:letterSpacing="-0.04"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+</LinearLayout>

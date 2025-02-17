@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/messageUserAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone" />
+
+    <!--this view is needed for custom holder-->
+    <ImageView
+        android:id="@+id/onlineIndicator"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignTop="@id/messageUserAvatar"
+        android:layout_alignEnd="@id/messageUserAvatar"
+        android:layout_alignRight="@id/messageUserAvatar"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp" />
+
+    <FrameLayout
+        android:id="@id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_toEndOf="@id/messageUserAvatar"
+        android:layout_toRightOf="@id/messageUserAvatar">
+
+        <LinearLayout
+            android:id="@id/fl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/messageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:padding="10dp" />
+
+            <FrameLayout
+                android:id="@+id/fl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                    android:id="@id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    app:siShape="@drawable/bg_custom_incoming_message"
+                    app:siSquare="false" />
+
+                <LinearLayout
+                    android:id="@+id/ll_audio"
+                    android:layout_width="250dp"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+                        android:id="@+id/voicePlayerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:enableVisualizer="true"
+                        app:playPauseBackgroundColor="@color/incoming_bubble_light"
+                        app:playPauseCornerRadius="100"
+                        app:playProgressbarColor="@color/white"
+                        app:progressTimeColor="@color/white"
+                        app:seekBarProgressColor="@color/white"
+                        app:seekBarThumbColor="@color/white"
+                        app:shareBackgroundColor="@color/incoming_bubble_light"
+                        app:shareCornerRadius="100"
+                        app:shareText="SHARE ME"
+                        app:showShareButton="true"
+                        app:showTiming="true"
+                        app:timingBackgroundColor="@color/incoming_bubble_light"
+                        app:viewBackground="@color/transparent"
+                        app:viewCornerRadius="100"
+                        app:visualizationNotPlayedColor="@color/incoming_bubble_light"
+                        app:visualizationPlayedColor="@color/white" />
+
+
+                    <!--
+                                        <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+                                            android:id="@+id/voicePlayerView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:enableVisualizer="true"
+                                            app:visualizationPlayedColor="#ff7700"
+                                            app:visualizationNotPlayedColor="#727171"
+                                            app:playPauseBackgroundColor="#ff7700"
+                                            app:timingBackgroundColor="#6AFF7700"
+                                            app:seekBarProgressColor="#000"
+                                            app:showShareButton="true"
+                                            app:shareCornerRadius="100"
+                                            app:playPauseCornerRadius="100"
+                                            app:showTiming="true"
+                                            app:viewCornerRadius="100"
+                                            app:viewBackground="#C6C4CF"
+                                            app:progressTimeColor="#000"
+                                            app:seekBarThumbColor="#FFC107"
+                                            app:shareBackgroundColor="#ff7700"
+                                            app:playProgressbarColor="#ff7700"
+                                            app:shareText="SHARE ME"/>
+
+                    -->
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/grey_semitransparent">
+
+            <ImageButton
+                android:id="@+id/resend"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_download"
+                app:tint="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/downloadProgress"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bubble"
+        android:layout_alignStart="@id/bubble"
+        android:layout_alignLeft="@id/bubble"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp">
+
+        <TextView
+            android:id="@id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--        android:layout_marginStart="20dp"-->
+        <!--        android:layout_marginLeft="20dp"-->
+
+    </LinearLayout>
+</RelativeLayout>

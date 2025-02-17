@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="3dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    tools:appCompatActivity=".view.fragments.AddToCartFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/how_many"
+            android:textColor="@color/app_red"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/select_quantity"
+            android:textColor="@color/grey_semitransparent"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/remove"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="@dimen/button_height"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_remove" />
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border_outline"
+                android:focusedByDefault="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="3"
+                android:minWidth="@dimen/button_height"
+                android:text="10"
+                android:textColor="@color/app_red"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="@dimen/button_height"
+                android:layout_height="@dimen/button_height"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_add" />
+        </LinearLayout>
+
+        <!--  <View
+              android:layout_width="wrap_content"
+              android:layout_height="0dp"
+              android:layout_weight="1" />
+  -->
+        <Button
+            android:id="@+id/addToCart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/button_selector"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="@string/add_to_cart"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <com.darewro.riderApp.view.customViews.UnderlinedTextView
+            android:id="@+id/removeFromCart"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="@string/remove_from_cart"
+            android:textAllCaps="false"
+            android:textColor="@color/clickable_text_black" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
