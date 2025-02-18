@@ -3,8 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragments.AllOrdersFragment">
 
     <include layout="@layout/content_order_listing" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutRunningOrder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/animation_order"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRiderMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/str_running_order_msg"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="8dp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_refresh">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_refresh"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_refresh"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

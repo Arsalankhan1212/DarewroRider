@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <com.darewro.riderApp.view.customViews.CirclePageIndicator
+            <com.darewro.rider.view.customViews.CirclePageIndicator
                 android:id="@+id/circlePageIndicator"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

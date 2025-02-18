@@ -47,7 +47,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center">
 
-                <com.darewro.riderApp.view.customViews.RoundedEdgesImageView
+                <com.darewro.rider.view.customViews.RoundedEdgesImageView
                     android:id="@+id/profile_pic"
                     android:layout_width="100dp"
                     android:layout_height="100dp"

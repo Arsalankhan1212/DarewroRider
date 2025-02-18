@@ -137,7 +137,7 @@
                     android:layout_centerHorizontal="true"
                     android:stepSize="1" />
 
-               <!-- <com.darewro.riderApp.view.customViews.CustomRatingBar
+               <!-- <com.darewro.rider.view.customViews.CustomRatingBar
                     android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"

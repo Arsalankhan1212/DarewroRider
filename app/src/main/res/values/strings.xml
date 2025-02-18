@@ -221,4 +221,6 @@
     <string name="hint_enter_a_message">Message...</string>
     <string name="ngrok_url">NGROK Url</string>
     <string name="app_update">Your version of app is outdated. A new version of app is available on Playstore. Please continue and update to latest app.</string>
+    <string name="str_running_order_msg">You already have a running order. Please complete it first. Thanks!</string>
+    <string name="str_refresh">Refresh, If No Running is Order</string>
 </resources>

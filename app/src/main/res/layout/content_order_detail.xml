@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.darewro.riderApp.view.activities.OrderDetailActivity"
+    tools:context="com.darewro.rider.view.activities.OrderDetailActivity"
     tools:showIn="@layout/activity_order_detail">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

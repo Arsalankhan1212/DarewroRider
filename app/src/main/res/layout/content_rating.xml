@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp">
 
-                <com.darewro.riderApp.view.customViews.CustomRatingBar
+                <com.darewro.rider.view.customViews.CustomRatingBar
                     android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

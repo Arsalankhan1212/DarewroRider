@@ -232,7 +232,7 @@
 
                 <!--android:foreground="@color/grey_overlay"-->
 
-                <com.darewro.riderApp.view.customViews.ProgressBarDotted
+                <com.darewro.rider.view.customViews.ProgressBarDotted
                     android:id="@+id/progress"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"

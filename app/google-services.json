@@ -123,7 +123,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1092116105466:android:0bcb6733cdf5dd58492143",
         "android_client_info": {
-          "package_name": "com.darewro.riderApp"
+          "package_name": "com.darewro.rider"
         }
       },
       "oauth_client": [
@@ -131,7 +131,7 @@
           "client_id": "1092116105466-09iokjmaf261algl52dhej5k7mrnqi5g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.darewro.riderApp",
+            "package_name": "com.darewro.rider",
             "certificate_hash": "a0a32efc11016fe75429220695291e09c1fbf45f"
           }
         },
@@ -139,7 +139,7 @@
           "client_id": "1092116105466-467a8effj51s4hkdps2cdhe34cculjht.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.darewro.riderApp",
+            "package_name": "com.darewro.rider",
             "certificate_hash": "1f4b970b6e824bd2a7ae3ba7b08615e3c239f7b3"
           }
         },
@@ -147,7 +147,7 @@
           "client_id": "1092116105466-486fjnrku1e19riti3bsfue9p2aed8pm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.darewro.riderApp",
+            "package_name": "com.darewro.rider",
             "certificate_hash": "9b6bd07a9134d6360661fda0ae2591017d454c01"
           }
         },

@@ -7,7 +7,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:appCompatActivity=".view.fragments.FeaturedFragment">
 
-    <com.darewro.riderApp.view.customViews.CustomSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.darewro.rider.view.customViews.CustomSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/swiperefresh"
@@ -23,7 +23,7 @@
             tools:appCompatActivity=".view.activities.HomeActivity"
             tools:showIn="@layout/activity_main" />
 
-    </com.darewro.riderApp.view.customViews.CustomSwipeRefreshLayout>
+    </com.darewro.rider.view.customViews.CustomSwipeRefreshLayout>
 
     <TextView
         android:id="@+id/no_data_layout"

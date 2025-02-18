@@ -93,7 +93,7 @@
             android:textAllCaps="false"
             android:textColor="@color/white" />
 
-        <com.darewro.riderApp.view.customViews.UnderlinedTextView
+        <com.darewro.rider.view.customViews.UnderlinedTextView
             android:id="@+id/removeFromCart"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
