@@ -269,6 +269,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     protected void onDestroy() {
         unregisterReceiver(receiver);
         unregisterReceiver(mBroadcastReceiverToast);
+        stopService();
         super.onDestroy();
     }
 
@@ -371,7 +372,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             changeAvailabilityStatus(true);
 
         } else {
-            if (SharedPreferenceHelper.getBoolean(SharedPreferenceHelper.RIDER_STATUS, MainActivity.this)) {
+           /* if (SharedPreferenceHelper.getBoolean(SharedPreferenceHelper.RIDER_STATUS, MainActivity.this)) {
                 statusSwitch.setChecked(true);
                 statusSwitch.setText("Available");
                 SharedPreferenceHelper.saveBoolean(SharedPreferenceHelper.IS_AVAILABLE, true, MainActivity.this);
@@ -380,7 +381,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             } else {
                 statusSwitch.setChecked(false);
                 statusSwitch.setText("Unavailable");
-            }
+            }*/
+            statusSwitch.setChecked(false);
+            statusSwitch.setText("Unavailable");
         }
 
         statusSwitch.setOnCheckedChangeListener(this);
@@ -388,10 +391,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         userName.setText(SharedPreferenceHelper.getString(SharedPreferenceHelper.USERNAME, MainActivity.this));
         rider_id.setText(SharedPreferenceHelper.getString(SharedPreferenceHelper.ID, MainActivity.this));
-
-
-        Log.d("TAG111", "USER ID= " + SharedPreferenceHelper.getString(SharedPreferenceHelper.ID, MainActivity.this));
-        Log.d("TAG111", "USER Contact Number= " + SharedPreferenceHelper.getString(SharedPreferenceHelper.MSISDN, MainActivity.this));
 
 
         if (SharedPreferenceHelper.getString(SharedPreferenceHelper.PICTUREPATH, MainActivity.this).equals("")) {
@@ -731,7 +730,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public void onSuccess(String calledApi, String json) {
-        Log.d("TAG111", "CalledAPI =" + calledApi + ", json =" + json);
         //status change callback
         AppUtils.makeNotification(json, MainActivity.this);
 
@@ -1063,7 +1061,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     }
 
     private void changeStatus(final boolean status) {
-        Log.d("TAG11", "IsAvailable= " + String.valueOf(status));
         InitApi initApi = new InitApi() {
             @Override
             public HashMap<String, String> getBody() {
@@ -1185,13 +1182,23 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             if (SharedPreferenceHelper.getBoolean(SharedPreferenceHelper.IS_AVAILABLE, MainActivity.this)) {
                 isLogout = true;
                 changeStatus(false);
-            } else {
+                SharedPreferenceHelper.saveBoolean(SharedPreferenceHelper.IS_AVAILABLE, false, MainActivity.this);
+            }
+            /*else {
                 String token = SharedPreferenceHelper.getString(SharedPreferenceHelper.FIRE_BASE_TOKEN, MainActivity.this);
                 SharedPreferenceHelper.clearPrefrences(MainActivity.this);
                 SharedPreferenceHelper.saveString(SharedPreferenceHelper.FIRE_BASE_TOKEN, token, MainActivity.this);
                 AppUtils.switchActivity(MainActivity.this, LoginActivity.class, null);
+                stopService();
                 MainActivity.this.finish();
-            }
+            }*/
+
+            String token = SharedPreferenceHelper.getString(SharedPreferenceHelper.FIRE_BASE_TOKEN, MainActivity.this);
+            SharedPreferenceHelper.clearPrefrences(MainActivity.this);
+            SharedPreferenceHelper.saveString(SharedPreferenceHelper.FIRE_BASE_TOKEN, token, MainActivity.this);
+            AppUtils.switchActivity(MainActivity.this, LoginActivity.class, null);
+            stopService();
+            MainActivity.this.finish();
         }
     }
 
