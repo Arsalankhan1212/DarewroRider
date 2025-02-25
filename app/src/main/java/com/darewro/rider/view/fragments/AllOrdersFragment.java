@@ -101,33 +101,37 @@ public class AllOrdersFragment extends BaseFragment {
     @Override
     public void setData(boolean isAllOrder, List<AllOrder> orders) {
 
-        String orderId = SharedPreferenceHelper.getString(SharedPreferenceHelper.ORDER_ID, getContext());
-
-        if (orderId.equals("")) {
-            layoutRunningOrder.setVisibility(View.GONE);
-            if (recyclerView != null) {
-                recyclerViewState = recyclerView.getLayoutManager().onSaveInstanceState();
-                adapterOrders = new AllOrdersAdapter(getActivity(), orders);
-                recyclerView.setAdapter(adapterOrders);
-                recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
-                adapterOrders.notifyDataSetChanged();
-            }
-            if (swipeRefreshLayout != null) {
-                swipeRefreshLayout.setRefreshing(false);
-            }
-            if (noLayout != null) {
-                if (orders != null && orders.size() > 0) {
-                    noLayout.setVisibility(View.GONE);
-                } else {
-                    noLayout.setVisibility(View.VISIBLE);
+        if (getContext() != null){
+            String orderId = SharedPreferenceHelper.getString(SharedPreferenceHelper.ORDER_ID, getContext());
+            if (orderId.equals("")) {
+                layoutRunningOrder.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
+                if (recyclerView != null) {
+                    recyclerViewState = recyclerView.getLayoutManager().onSaveInstanceState();
+                    adapterOrders = new AllOrdersAdapter(getActivity(), orders);
+                    recyclerView.setAdapter(adapterOrders);
+                    recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
+                    adapterOrders.notifyDataSetChanged();
                 }
-            }
-        } else {
-            String userName = SharedPreferenceHelper.getString(SharedPreferenceHelper.USERNAME, getContext());
+                if (swipeRefreshLayout != null) {
+                    swipeRefreshLayout.setRefreshing(false);
+                }
+                if (noLayout != null) {
+                    if (orders != null && orders.size() > 0) {
+                        noLayout.setVisibility(View.GONE);
+                    } else {
+                        noLayout.setVisibility(View.VISIBLE);
+                    }
+                }
+            } else {
+                recyclerView.setVisibility(View.GONE);
+                layoutRunningOrder.setVisibility(View.VISIBLE);
 
-            layoutRunningOrder.setVisibility(View.VISIBLE);
-            tvRiderMessage.setText("Hi "+userName +", "+getString(R.string.str_running_order_msg));
+                String userName = SharedPreferenceHelper.getString(SharedPreferenceHelper.USERNAME, getContext());
+                tvRiderMessage.setText("Hi "+userName +", "+getString(R.string.str_running_order_msg));
+            }
         }
+
 
 
     }
